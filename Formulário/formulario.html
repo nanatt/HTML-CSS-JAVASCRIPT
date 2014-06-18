@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Exercício de formulário com  caixas específicas</title>
+		<link rel="stylesheet" type="text/css" href="formulario.css"/>
+	</head>
+	<body>
+		<header>
+			<div id="header">
+				<img src="foto.png">
+				<label for="keywords_id">Busca: </label>
+				<input 
+				id="keywords_id" 
+				type="search" 
+				name="keywords" 
+				placeholder="Keywords">
+			<a href="home.html">Home</a>
+		</div>
+		</header>
+		<form action="cadastro.html" method="post">
+			<div class='left'></div>
+			<div class='middle'>
+				<h3>Dados Pessoais</h3>
+					<ul>
+						<li><label for="name_id">Nome: </label>
+								<input id="name_id" type="text" name="name" placeholder="Nome Completo"></li>
+						<li><label for="cpf_id">CPF: </label>
+								<input id="cpf_id" type="text" pattern="[0-9]{9}-[0-9]{2}" title="CPF tem um formato: #########-##"></li>
+						<li><label for="nascimento_id">Nascimento: </label>
+								<input id="nascimento_id" type="date" name="nascimento">
+
+							<label for="idade_id">Idade: </label>
+								<input id="idade_id" type="number" name="idade" min="18"max="70"></li>
+
+						<li><label for=="estado_id">Estado: </label>
+							<select for="estado_id" name="Estado">
+								<optgroup label="Região Sudeste">
+									<option value="RJ">Rio de Janeiro</option>
+									<option value="SP">São Paulo</option>
+									<option value="MG">Minas Gerais</option>
+									<option value="ES">Espírito Santo</option>
+								</optgroup>
+							</select>
+
+							<label for="cidade_id">Cidade: </label>
+								<input id="cidade_id" type="text" name="cidade" list="comidas_id">
+									<datalist id="cidaden_id">
+										<optgroup label="Rio de Janeiro">
+												<option value="Rio de Janeiro">
+												<option value="São Gonçalo">
+												<option value="Vassouras">
+										</optgroup>
+									</datalist></li>
+
+						<li><label for="email_id">Email: </label>
+							<input id="email_id" type="email" name="email"placeholder="Seu email"></li>
+
+						<li><label for="telefone_id">Telefone: </label>
+							<input id="telefone_id" type="tel" name="telefone" placeholder="Seu telefone"></li>
+
+						<li><label for="horario_disponivel_id">Horário disponível: </label>
+							<input id="horario_disponivel_id" type="time" name="horario_disponivel"></li>
+
+						<li><label for="senha_id">Senha: </label>
+							<input id="senha_id" type="password" name="senha" placeholder="Sua senha"></li>
+
+
+			</ul>
+
+			<h3>Conhecimento</h3>
+
+					<label for="site_id">Algum Projeto: </label>
+						<input 
+				id="site_id" 
+				type="url" 
+				name="url"
+				placeholder="Site feito"><br>
+				<label for="programaçãoid">Programação: </label>
+			<ul>
+				<li><label for="java_id">Java</label>
+						<input id="java_id" type="checkbox" value="java" name="linguagens"></li>
+				<li><label for="c#_id">C#</label>
+						<input id="c#_id" type="checkbox" value="c#" name="linguagens"></li>
+				<li><label for="ruby_id">Ruby</label>
+						<input id="ruby_id" type="checkbox" value="ruby" name="linguagens"></li>
+				<li><label for="javascript_id">Javascript</label>
+						<input id="javascript_id" type="checkbox" value="javascript" name="linguagens"></li>
+				<li><label for="htmlcss_id">HTML/CSS</label>
+						<input id="htmlcss_id" type="checkbox" value="htmlcss" name="linguagens"></li>
+			</ul>
+
+			<label for="mensagem_id">Exposição: </label><br>
+			<textarea 
+				id="mensagem_id" 
+				name="mensagem"
+				rows="5"
+				cols="50"
+				maxlength="150"></textarea>
+			
+			<h3>Currículo</h3>
+
+			<input id="upload_id" type="file" value="Baixar" name="file">
+
+			<br>
+			<label for="mensagem_id">Descrição: </label><br>
+			<textarea 
+				id="mensagem_id" 
+				name="mensagem"
+				rows="5"
+				cols="50"
+				maxlength="150">
+			</textarea>
+
+	<div id="div4">
+
+			<input id="submit_id" type="submit" value="Enviar">
+
+			<input id="reset_id" type="reset" value="Reiniciar">
+	</div>	
+	</form>
+	<div id="div5">	
+		<footer readonly>
+			<p>Criado por: Nathália</p>
+			<nav id="paginicial">
+				<a href="home.html">Home</a>
+			</nav>
+		</footer>
+	</div>
+</div>
+<div class='right'></div>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<html> 
+<body> 
+<script type='text/javascript'> 
+var M1,M2,M3,media_anual,nota_tirar_final,resp,tot_apro,tot_apoio,tot_repro,totgeral, somageral; 
+resp='s'; 
+tot_apro=0; tot_apoio=0; tot_repro=0, totgeral=0, soma_apro=0, soma_apoio=0, soma_repro=0, somageral=0; 
+while (resp=='s') 
+{ 
+M1=parseFloat(prompt('Informe a nota da 1a certificação ' ,'Digite aqui')); 
+M2=parseFloat(prompt('Informe a nota da 2a certificação ' ,'Digite aqui')); 
+M3=parseFloat(prompt('Informe a nota da 3a certificação ' ,'Digite aqui')); 
+media_anual=((M1*3)+(M2*3)+(M3*4))/10; 
+totgeral=totgeral+1; 
+somageral=somageral+media_anual; 
+document.write('<p><p>A média anual é ' + media_anual); 
+if (media_anual >= 7) { 
+ document.write('<p>Aprovado'); 
+ tot_apro=tot_apro+1; 
+ soma_apro=soma_apro+media_anual; 
+ } 
+if (media_anual < 1.67) { 
+ document.write('<p>Reprovado'); 
+ tot_repro=tot_repro+1; 
+ soma_repro=soma_repro+media_anual; 
+ } 
+if (media_anual >= 1.67 && media_anual < 7) { 
+ document.write('<p>Vai para prova final'); 
+ nota_tirar_final = ( 25-(media_anual*3) ) / 2; 
+ nota_tirar_final = Math.round(nota_tirar_final * 100)/100; 
+ document.write('<p>Precisa tirar ' + nota_tirar_final); 
+ tot_apoio=tot_apoio+1; 
+ soma_apoio=soma_apoio+media_anual; 
+ } 
+document.write('<p>-------------------------------------------------------------'); 
+resp=prompt('Deseja processar outro aluno? ','Responda s/n'); 
+} 
+document.write('<p>-------------------------------------------------------------'); 
+document.write('<p>Total aprovados: ' + tot_apro); 
+document.write('<p>Total reprovados: ' + tot_repro); 
+document.write('<p>Total em prova final: ' + tot_apoio); 
+document.write('<p>Total de alunos: ' + totgeral); 
+document.write('<p>-------------------------------------------------------------'); 
+if (tot_apro != 0) 
+ document.write('<p>Média aprovados: ' + soma_apro/tot_apro); 
+else 
+ document.write('<p>Média aprovados: não há alunos nesta situação'); if (tot_repro != 0) 
+ document.write('<p>Média reprovados: ' + soma_repro/tot_repro); 
+else 
+ document.write('<p>Média reprovados: não há alunos nesta situação'); 
+if (tot_apoio != 0) 
+ document.write('<p>Média em prova final: ' + soma_apoio/tot_apoio); 
+else 
+ document.write('<p>Média em prova final: não há alunos nesta situação'); 
+document.write('<p>Média geral: ' + somageral/totgeral); 
+</script> 
+</body> 
+</html> 
