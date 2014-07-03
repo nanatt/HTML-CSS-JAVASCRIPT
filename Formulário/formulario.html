@@ -7,15 +7,14 @@
 	</head>
 	<body>
 		<header>
-			<div id="header">
-				<a href="home.html"><img src="foto.jpg"></a>
-				<label for="keywords_id">Busca: </label>
+			<a href="home.html"><img src="foto.jpg"></a>
+			<div id="search"><label for="keywords_id">Busca: </label>
 				<input 
 				id="keywords_id" 
 				type="search" 
 				name="keywords" 
 				placeholder="Keywords">
-		</div>
+			</div>
 		</header>
 			<div class='left'></div>
 			<div class='right'></div>
@@ -45,7 +44,7 @@
 
 							<label for="cidade_id">Cidade: </label>
 								<input id="cidade_id" type="text" name="cidade" list="comidas_id">
-									<datalist id="cidaden_id">
+									<datalist id="cidade_id">
 										<optgroup label="Rio de Janeiro">
 												<option value="Rio de Janeiro">
 												<option value="São Gonçalo">
@@ -76,8 +75,9 @@
 				type="url" 
 				name="url"
 				placeholder="Site feito"><br>
+
 				<label for="programaçãoid">Programação: </label>
-			<ul>
+			<ul id="languages">
 				<li><label for="java_id">Java</label>
 						<input id="java_id" type="checkbox" value="java" name="linguagens"></li>
 				<li><label for="c#_id">C#</label>

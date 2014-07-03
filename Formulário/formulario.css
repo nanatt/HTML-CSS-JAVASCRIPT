@@ -1,6 +1,16 @@
+header{
+	position: relative;
+	height: 205px;
+}
+#search{
+	position: relative;
+	top: -30px;
+	left: 80%;
+	font-style: blue;
+}
 .middle{
 	margin: auto;
-	border: #000000 1px solid;
+	border: #000000 2px solid;
 	width: 40%;
 	padding: 20px;
 }
@@ -10,17 +20,18 @@
 	float: left;
 	width: 25%;
 	height: 800px;
-	border: #000000 2px dashed;
+	border: #000000 1px dashed;
 }
 .right{
 	padding: 6.5px;
 	float: right;
 	width: 25%;
 	height: 800px;
-	border: #000000 2px dashed;
+	border: #000000 1px dashed;
 }
 ul{
 	list-style-type: none;
 }
-textarea{
+.middle input{ 
+	display: block; 
 }
